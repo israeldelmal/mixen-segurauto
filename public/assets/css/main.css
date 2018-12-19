@@ -1,0 +1,1335 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+* {
+	font-family: 'Lato', sans-serif;
+	font-size  : 1em;
+	margin     : 0px;
+	padding    : 0px;
+	box-sizing : border-box;
+	outline    : none;
+}
+
+img {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	transition     : all 0.3s ease-out;
+}
+
+button {
+	cursor: pointer;
+}
+
+body {
+	background-color: rgb(255, 255, 255);
+}
+
+	body > button {
+		width           : 32px;
+		background-color: transparent;
+		border          : none;
+		position        : fixed;
+		top             : 40px;
+		left            : 40px;
+		z-index         : 1000;
+		display         : none;
+	}
+
+		body > button > span {
+			display         : block;
+			width           : 100%;
+			height          : 1px;
+			background-color: rgb(255, 255, 255);
+			box-shadow      : 0 0 3px rgb(0, 0, 0);
+			margin-bottom   : 3px;
+			transition      : all 0.3s ease-out;
+		}
+
+		body > button > span:last-of-type {
+			margin-bottom: 0px;
+		}
+
+	body > nav {
+		width     : 100%;
+		position  : fixed;
+		top       : 0px;
+		left      : 0px;
+		z-index   : 100;
+		transition: all 0.3s ease-out;
+	}
+
+		body > nav > div {
+			width          : 100%;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+		}
+
+		body > nav > div:first-of-type {
+			height          : 50px;
+			background-color: rgb(255, 255, 255);
+		}
+
+		body > nav > div:last-of-type {
+			height          : 75px;
+			background-color: rgb(0, 53, 99);
+		}
+
+			body > nav > div > div {
+				width      : 80%;
+				display    : flex;
+				align-items: center;
+			}
+
+			body > nav > div:first-of-type > div {
+				justify-content: space-between;
+			}
+
+				body > nav > div:first-of-type > div > a {
+					display: inline-block;
+					height : 25px;
+				}
+
+					body > nav > div:first-of-type > div > a > img {
+						height : 100%;
+						display: none;
+					}
+
+				body > nav > div:first-of-type > div > ul {
+					list-style : none;
+					display    : flex;
+					align-items: center;
+				}
+
+					body > nav > div:first-of-type > div > ul > li {
+						margin-left: 20px;
+					}
+
+						body > nav > div:first-of-type > div > ul > li > a {
+							height         : 75px;
+							display        : flex;
+							align-items    : center;
+							justify-content: center;
+							color          : rgb(0, 0, 0);
+							font-weight    : 700;
+						}
+
+							body > nav > div:first-of-type > div > ul > li > a > span {
+								width          : 20px;
+								height         : 20px;
+								color          : rgb(255, 0, 0);
+								border         : 1px solid rgb(0, 0, 0);
+								display        : flex;
+								align-items    : center;
+								justify-content: center;
+								font-size      : 0.7em;
+								transform      : rotate(45deg);
+								margin-right   : 12px;
+							}
+
+								body > nav > div:first-of-type > div > ul > li > a > span > span {
+									transform: rotate(-45deg);
+								}
+
+		body > nav > div:last-of-type > div {
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			body > nav > div:last-of-type > div > a {
+				display: inline-block;
+				height : 50px;
+			}
+
+				body > nav > div:last-of-type > div > a > img {
+					height: 100%;
+				}
+
+			body > nav > div:last-of-type > div > div {
+				display        : flex;
+				flex-flow      : row wrap;
+				justify-content: space-between;
+			}
+
+				body > nav > div:last-of-type > div > div > a {
+					height         : 45px;
+					padding        : 0px 24px;
+					color          : rgb(255, 255, 255);
+					display        : flex;
+					align-items    : center;
+					justify-content: center;
+				}
+
+				body > nav > div:last-of-type > div > div > a:hover {
+					background-color: rgb(5, 86, 157);
+				}
+
+				body > nav > div:last-of-type > div > div > a:last-of-type {
+					height          : 45px;
+					background-color: rgb(255, 0, 0);
+				}
+
+				body > nav > div:last-of-type > div > div > a:last-of-type:hover {
+					background-color: rgb(155, 0, 0);
+				}
+
+	body > header {
+		width          : 100%;
+		height         : 100vh;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column;
+		position       : relative;
+	}
+
+		body > header > h1 {
+			text-align   : center;
+			white-space  : pre-line;
+			font-size    : 3.5em;
+			color        : rgb(255, 255, 255);
+			font-weight  : 900;
+			margin-bottom: 32px;
+		}
+
+		body > header > a:first-of-type {
+			color           : rgb(255, 255, 255);
+			background-color: rgb(255, 0, 0);
+			border-radius   : 6px;
+			padding         : 16px 30px;
+		}
+
+		body > header > a:first-of-type:hover {
+			background-color: rgb(155, 0, 0);
+		}
+
+			body > header > a:first-of-type > span {
+				margin-left: 6px;
+			}
+
+		body > header > a:last-of-type {
+			color    : rgb(255, 255, 255);
+			font-size: 2.5em;
+			position : absolute;
+			bottom   : 40px;
+		}
+
+#nosotros {
+	width              : 100%;
+	height             : 650px;
+	background-size    : auto 100%;
+	background-position: right;
+	background-repeat  : no-repeat;
+	display            : flex;
+	align-items        : center;
+}
+
+	#nosotros > div {
+		width         : 50%;
+		padding       : 0px 100px;
+		display       : flex;
+		align-items   : flex-end;
+		flex-direction: column;
+	}
+
+		#nosotros > div > h2 {
+			width        : 100%;
+			white-space  : pre-line;
+			padding-left : 20px;
+			border-left  : 2px solid rgb(255, 0, 0);
+			margin-bottom: 40px;
+			color        : rgb(220, 220, 220);
+			font-weight  : 900;
+			font-size    : 1.5em;
+			line-height: 1.1em;
+		}
+
+			#nosotros > div > h2 > strong {
+				color      : rgb(0, 0, 0);
+				font-size  : 1.5em;
+				font-weight: 900;
+			}
+
+		#nosotros > div > p {
+			width        : 100%;
+			text-align   : justify;
+			font-weight  : 300;
+			margin-bottom: 20px;
+		}
+
+		#nosotros > div > a {
+			background-color: rgb(255, 0, 0);
+			color           : rgb(255, 255, 255);
+			padding         : 12px 24px;
+			border-radius   : 6px;
+		}
+
+		#nosotros > div > a:hover {
+			background-color: rgb(155, 0, 0);
+		}
+
+			#nosotros > div > a > span {
+				margin-left: 6px;
+			}
+
+#asegurate {
+	width          : 100%;
+	height         : 350px;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	flex-direction : column;
+}
+
+	#asegurate > h3 {
+		font-size    : 2.5em;
+		font-weight  : 900;
+		white-space  : pre-line;
+		color        : rgb(255, 255, 255);
+		text-align   : center;
+		margin-bottom: 32px;
+	}
+
+	#asegurate > a {
+		background-color: rgb(255, 0, 0);
+		color           : rgb(255, 255, 255);
+		padding         : 12px 24px;
+		border-radius   : 6px;
+	}
+
+	#asegurate > a:hover {
+		background-color: rgb(155, 0, 0);
+	}
+
+		#asegurate > a > span {
+			margin-left: 6px;
+		}
+
+#servicios {
+	width              : 100%;
+	padding            : 80px 0px;
+	background-image   : url('../images/servicios/fondo.png');
+	background-position: bottom left;
+	background-repeat  : no-repeat;
+}
+
+	#servicios > div {
+		width         : 80%;
+		margin        : auto;
+		display       : flex;
+		align-items   : center;
+		flex-direction: column;
+	}
+
+		#servicios > div > h2 {
+			width        : 100%;
+			white-space  : pre-line;
+			padding-left : 20px;
+			border-left  : 2px solid rgb(255, 0, 0);
+			margin-bottom: 40px;
+			color        : rgb(220, 220, 220);
+			font-weight  : 900;
+			font-size    : 1.5em;
+			line-height: 1.1em;
+		}
+
+			#servicios > div > h2 > strong {
+				color      : rgb(0, 0, 0);
+				font-size  : 1.5em;
+				font-weight: 900;
+			}
+
+		#servicios > div > p {
+			width        : 100%;
+			font-weight  : 300;
+			margin-bottom: 40px;
+		}
+
+		#servicios > div > ul {
+			width          : 100%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+			list-style     : none;
+			margin-bottom  : 40px;
+		}
+
+			#servicios > div > ul > li {
+				width           : 23.5%;
+				height          : 320px;
+				padding         : 12px;
+				background-color: rgb(0, 53, 99);
+				position        : relative;
+			}
+
+				#servicios > div > ul > li > a {
+					display        : flex;
+					width          : 100%;
+					height         : 100%;
+					position       : relative;
+					align-items    : center;
+					justify-content: center;
+					flex-direction : column;
+					color          : rgb(255, 255, 255);
+					font-weight    : 300;
+				}
+
+				#servicios > div > ul > li > a:hover {
+					background-color: rgb(5, 86, 157);
+				}
+
+					#servicios > div > ul > li > a > span {
+						font-size    : 7.5em;
+						margin-bottom: 18px;
+					}
+
+					#servicios > div > ul > li > a > strong {
+						margin-bottom: 12px;
+					}
+
+		#servicios > div > a {
+			background-color: rgb(255, 0, 0);
+			padding         : 12px 24px;
+			border-radius   : 6px;
+			color           : rgb(255, 255, 255);
+		}
+
+		#servicios > div > a:hover {
+			background-color: rgb(155, 0, 0);
+		}
+
+			#servicios > div > a > span {
+				margin-left: 6px;
+			}
+
+#pagos {
+	width              : 100%;
+	height             : 400px;
+	background-color   : rgb(12, 100, 177);
+	background-image   : url('../images/pagos/fondo.png');
+	background-size    : cover;
+	background-position: center;
+	position           : relative;
+	display            : flex;
+	align-items        : center;
+	justify-content    : center;
+}
+
+	#pagos > div {
+		width: 80%;
+	}
+
+		#pagos > div > h2 {
+			color        : rgb(255, 255, 255);
+			font-size    : 2.5em;
+			font-weight  : 300;
+			white-space  : pre-line;
+			line-height  : 1em;
+			margin-bottom: 40px;
+		}
+
+			#pagos > div > h2 > strong {
+				font-weight: 900;
+			}
+
+		#pagos > div > ul {
+			list-style: none;
+		}
+
+			#pagos > div > ul > li {
+				color        : rgb(255, 255, 255);
+				margin-bottom: 8px;
+				font-size    : 1.75em;
+				font-weight  : 300;
+			}
+
+			#pagos > div > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				#pagos > div > ul > li > span {
+					margin-right: 8px;
+				}
+
+	#pagos > img {
+		height  : 100%;
+		position: absolute;
+		right   : 0px;
+		top     : 0px;
+	}
+
+#blog {
+	width              : 100%;
+	padding            : 80px 0px;
+	background-repeat  : no-repeat;
+	background-position: top left;
+}
+
+	#blog > div {
+		width : 80%;
+		margin: auto;
+	}
+
+		#blog > div > h1 {
+			width        : 100%;
+			white-space  : pre-line;
+			padding-left : 20px;
+			border-left  : 2px solid rgb(255, 0, 0);
+			margin-bottom: 40px;
+			color        : rgb(220, 220, 220);
+			font-weight  : 900;
+			font-size    : 1.5em;
+			line-height: 1.1em;
+		}
+
+			#blog > div > h1 > strong {
+				color      : rgb(0, 0, 0);
+				font-size  : 1.5em;
+				font-weight: 900;
+			}
+
+		#blog > div > sub {
+			font-weight  : 300;
+			margin-bottom: 40px;
+			display      : block;
+		}
+
+		#blog > div > main {
+			width          : 100%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			#blog > div > main > article {
+				width: 32%;
+			}
+
+				#blog > div > main > article > div:first-of-type {
+					width              : 100%;
+					height             : 300px;
+					background-size    : cover;
+					background-position: center center;
+					background-repeat  : no-repeat;
+					margin-bottom      : 12px;
+				}
+
+				#blog > div > main > article > div:last-of-type {
+					width          : 100%;
+					display        : flex;
+					flex-flow      : row wrap;
+					align-items    : center;
+					justify-content: space-between;
+					margin-bottom  : 12px;
+				}
+
+					#blog > div > main > article > div:last-of-type > time {
+						width           : 20%;
+						background-color: rgb(12, 100, 177);
+						color           : rgb(255, 255, 255);
+						text-align      : center;
+						padding         : 8px;
+						font-weight     : 900;
+					}
+
+					#blog > div > main > article > div:last-of-type > h1 {
+						width       : 80%;
+						padding-left: 8px;
+						font-size   : 1.25em;
+						font-weight : 700;
+					}
+
+				#blog > div > main > article > p {
+					text-align   : justify;
+					margin-bottom: 12px;
+				}
+
+				#blog > div > main > article > a {
+					color: rgb(0, 0, 0);
+				}
+
+				#blog > div > main > article > a:hover {
+					color: rgb(255, 0, 0);
+				}
+
+					#blog > div > main > article > a > span {
+						margin-left: 6px;
+					}
+
+#articulo {
+	width: 100%;
+}
+
+	#articulo > header {
+		width          : 100%;
+		height         : 60vh;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+	}
+
+		#articulo > header > span {
+			color      : rgb(255, 255, 255);
+			font-weight: 900;
+			font-size  : 3em;
+			display    : block;
+			text-align : center;
+			margin-top : 100px;
+		}
+
+	#articulo > article {
+		width          : 100%;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+	}
+
+		#articulo > article > div {
+			width: 50%;
+		}
+
+		#articulo > article > div:first-of-type {
+			padding: 64px;
+		}
+
+			#articulo > article > div:first-of-type > h1 {
+				font-size    : 2em;
+				margin-bottom: 32px;
+			}
+
+			#articulo > article > div:first-of-type > h2,
+			#articulo > article > div:first-of-type > h3,
+			#articulo > article > div:first-of-type > h4,
+			#articulo > article > div:first-of-type > h5,
+			#articulo > article > div:first-of-type > h6 {
+				margin-bottom: 8px;
+				font-size    : 1.25em;
+			}
+
+			#articulo > article > div:first-of-type > p {
+				font-weight  : 300;
+				margin-bottom: 32px;
+				text-align   : justify;
+			}
+
+			#articulo > article > div:first-of-type > p:last-of-type {
+				margin-bottom: 0px;
+			}
+
+#contacto {
+	width          : 100%;
+	height         : 600px;
+	position       : relative;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+}
+
+	#contacto > div {
+		width: 80%;
+	}
+
+		#contacto > div > h2 {
+			width        : 100%;
+			white-space  : pre-line;
+			margin-bottom: 40px;
+			color        : rgb(255, 255, 255);
+			font-weight  : 900;
+			font-size    : 1.75em;
+			line-height  : 1.1em;
+		}
+
+		#contacto > div > form {
+			width          : 50%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			#contacto > div > form > div {
+				width        : 49%;
+				margin-bottom: 16px;
+			}
+
+			#contacto > div > form > div:nth-of-type(3),
+			#contacto > div > form > div:nth-of-type(4) {
+				width: 100%;
+			}
+
+			#contacto > div > form > div:nth-of-type(5) {
+				width          : 100%;
+				display        : flex;
+				justify-content: flex-end;
+				margin-bottom  : 0px;
+			}
+
+				#contacto > div > form > div > label {
+					display      : block;
+					width        : 100%;
+					color        : rgb(255, 255, 255);
+					font-weight  : 400;
+					margin-bottom: 6px;
+				}
+
+				#contacto > div > form > div > input,
+				#contacto > div > form > div > textarea {
+					width           : 100%;
+					background-color: transparent;
+					border          : 1px solid rgb(255, 255, 255);
+					padding         : 8px;
+					color           : rgb(255, 255, 255);
+				}
+
+				#contacto > div > form > div > input::placeholder,
+				#contacto > div > form > div > textarea::placeholder {
+					color: rgb(255, 255, 255);
+				}
+
+				#contacto > div > form > div > button {
+					display         : inline-block;
+					padding         : 10px 30px;
+					background-color: rgb(255, 0, 0);
+					color           : rgb(255, 255, 255);
+					border          : none;
+					border-radius   : 6px;
+					transition      : all 0.3s ease-out;
+				}
+
+				#contacto > div > form > div > button:hover {
+					background-color: rgb(155, 0, 0);
+				}
+
+				#contacto > div > form > div > div {
+					width           : 100%;
+					font-size       : 0.75em;
+					font-weight     : 300;
+					background-color: rgb(234, 0, 0);
+					color           : rgb(255, 255, 255);
+					padding         : 6px;
+					display         : none;
+				}
+
+				#contacto > div > form > figure {
+					width  : 100%;
+					display: none;
+				}
+
+					#contacto > div > form > figure > img {
+						display: block;
+						width  : 40px;
+						margin : auto;
+					}
+
+	#contacto > img {
+		height  : 100%;
+		position: absolute;
+		top     : 0px;
+		right   : 0px;
+	}
+
+
+#footer {
+	width  : 100%;
+	padding: 80px 0px;
+}
+
+	#footer > div {
+		width          : 80%;
+		margin         : auto;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+		align-items    : center;
+	}
+
+		#footer > div > ul {
+			list-style: none;
+		}
+
+			#footer > div > ul > li {
+				margin-bottom: 24px;
+			}
+
+			#footer > div > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				#footer > div > ul > li > a {
+					display    : flex;
+					align-items: center;
+					color      : rgb(0, 0, 0);
+					font-weight: 700;
+				}
+
+					#footer > div > ul > li > a > span {
+						width          : 20px;
+						height         : 20px;
+						color          : rgb(255, 0, 0);
+						border         : 1px solid rgb(0, 0, 0);
+						display        : flex;
+						align-items    : center;
+						justify-content: center;
+						font-size      : 0.7em;
+						transform      : rotate(45deg);
+						margin-right   : 12px;
+					}
+
+						#footer > div > ul > li > a > span > span {
+							transform: rotate(-45deg);
+						}
+
+		#footer > div > img {
+			width: 300px;
+		}
+
+	#footer > div > div {
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+	}
+
+		#footer > div > div > a {
+			width           : 40px;
+			height          : 40px;
+			border-radius   : 50%;
+			display         : flex;
+			align-items     : center;
+			justify-content : center;
+			color           : rgb(255, 255, 255);
+			background-color: rgb(255, 0, 0);
+		}
+
+		#footer > div > div > a:hover {
+			background-color: rgb(155, 0, 0);
+		}
+
+		#footer > div > div > a:first-of-type {
+			margin-right: 16px;
+		}
+
+	body > footer {
+		width           : 100%;
+		padding         : 16px;
+		background-color: rgb(0, 53, 99);
+		text-align      : center;
+		color           : rgb(255, 255, 255);
+		font-weight     : 300;
+		text-align      : center;
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+	}
+
+		body > footer > div {
+			margin-right : 16px;
+			padding-right: 16px;
+			position     : relative;
+		}
+
+			body > footer > div:nth-of-type(2) > a {
+				display    : inline-block;
+				color      : rgb(234, 0, 0);
+				font-weight: 900;
+			}
+
+			body > footer > div:nth-of-type(2) > a:hover {
+				color: rgb(134, 0, 0);
+			}
+
+		body > footer > div:last-of-type {
+			margin-right   : 0px;
+			padding-right  : 0px;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+		}
+
+			body > footer > div:last-of-type > strong {
+				margin-right: 6px;
+			}
+
+			body > footer > div:last-of-type > a {
+				display: inline-block;
+			}
+
+				body > footer > div:last-of-type > a > img {
+					display: block;
+					height: 0.85em;
+				}
+
+@media screen and (max-width: 1707px) {
+	#nosotros {
+		height: 500px;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	body > nav > div > div {
+		width: 85%;
+	}
+
+	#servicios > div {
+		width: 85%;
+	}
+
+		#servicios > div > ul > li > a {
+			text-align: center;
+		}
+
+	#pagos > div {
+		width: 85%;
+	}
+
+	#blog > div {
+		width: 85%;
+	}
+
+	#contacto {
+		height: 550px;
+	}
+
+		#contacto > div {
+			width: 85%;
+		}
+
+	#footer > div {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	#nosotros {
+		background-image: none !important;
+	}
+
+		#nosotros > div {
+			width: 100%;
+		}
+
+	#contacto > img {
+		display: none;
+	}
+
+		#contacto > div > form {
+			width: 100%;
+		}
+}
+
+@media all and (orientation: landscape) and (max-width: 1370px) {
+	body > button {
+		display: block;
+	}
+
+	.active-btn {
+		margin-bottom: 6px;
+	}
+
+	.active-btn:last-of-type {
+		margin-bottom: 0px;
+	}
+
+	body > nav {
+		width     : 100%;
+		height    : 100vh;
+		position  : fixed;
+		margin-top: -100vh;
+	}
+
+	.active-nav {
+		margin-top: 0px;
+	}
+
+		body > nav > div:first-of-type {
+			width : 100%;
+			height: 50%;
+		}
+
+			body > nav > div:first-of-type > div {
+				width          : 90%;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+			}
+
+				body > nav > div:first-of-type > div > a {
+					height       : 180px;
+					margin-bottom: 32px;
+				}
+
+				body > nav > div:first-of-type > div > a > img {
+					display: block;
+				}
+
+		body > nav > div:last-of-type {
+			width : 100%;
+			height: 50%;
+		}
+
+			body > nav > div:last-of-type > div {
+				width          : 90%;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+			}
+
+			body > nav > div:last-of-type > div > a {
+				display: none;
+			}
+
+	#nosotros {
+		background-image: none !important;
+	}
+
+		#nosotros > div {
+			width: 100%;
+		}
+
+	#contacto > img {
+		display: none;
+	}
+
+		#contacto > div > form {
+			width: 100%;
+		}
+}
+
+@media all and (orientation: portrait) and (max-width: 1030px) {
+	body > button {
+		display: block;
+	}
+
+	.active-btn {
+		margin-bottom: 6px;
+	}
+
+	.active-btn:last-of-type {
+		margin-bottom: 0px;
+	}
+
+	body > nav {
+		width     : 100%;
+		height    : 100vh;
+		position  : fixed;
+		margin-top: -100vh;
+	}
+
+	.active-nav {
+		margin-top: 0px;
+	}
+
+		body > nav > div:first-of-type {
+			width : 100%;
+			height: 50%;
+		}
+
+			body > nav > div:first-of-type > div {
+				width          : 90%;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+			}
+
+				body > nav > div:first-of-type > div > a {
+					height       : 180px;
+					margin-bottom: 32px;
+				}
+
+					body > nav > div:first-of-type > div > a > img {
+						display: block;
+					}
+
+		body > nav > div:last-of-type {
+			width : 100%;
+			height: 50%;
+		}
+
+			body > nav > div:last-of-type > div {
+				width          : 90%;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+			}
+
+			body > nav > div:last-of-type > div > a {
+				display: none;
+			}
+
+			body > nav > div:last-of-type > div > div {
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+			}
+
+	#servicios > div > ul > li {
+		height: 250px;
+	}
+
+		#servicios > div > ul > li > a > span {
+			font-size: 5em;
+		}
+
+	#pagos > img {
+		display: none;
+	}
+
+	#blog > div > main > article {
+		width        : 100%;
+		margin-bottom: 32px;
+	}
+
+	#blog > div > main > article:last-of-type {
+		margin-bottom: 0px;
+	}
+
+	#footer > div > ul {
+		display: none;
+	}
+
+	#articulo > header {
+		display: none;
+	}
+
+	#articulo > article {
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column-reverse;
+	}
+
+		#articulo > article > div {
+			width: 100%;
+		}
+
+		#articulo > article > div:last-of-type {
+			height: 350px;
+		}
+}
+
+@media all and (orientation: landscape) and (max-width: 1030px) {
+	#servicios > div > ul > li {
+		height: 250px;
+	}
+
+		#servicios > div > ul > li > a > span {
+			font-size: 4.5em;
+		}
+
+	#pagos > img {
+		display: none;
+	}
+
+	#blog > div > main > article {
+		width        : 100%;
+		margin-bottom: 32px;
+	}
+
+	#blog > div > main > article:last-of-type {
+		margin-bottom: 0px;
+	}
+
+	#footer > div > ul {
+		display: none;
+	}
+}
+
+@media all and (orientation: portrait) and (max-width: 770px) {
+	body > header > h1 {
+		width      : 90%;
+		white-space: normal;
+	}
+
+	#servicios > div > ul > li {
+		width        : 100%;
+		height       : 220px;
+		margin-bottom: 32px;
+	}
+
+	#servicios > div > ul > li:last-of-type {
+		margin-bottom: 0px;
+	}
+}
+
+@media all and (orientation: landscape) and (max-width: 740px) {
+	body > nav > div:first-of-type > div > a {
+		height: 60px;
+		margin-bottom: 16px;
+	}
+
+	body > header > h1 {
+		font-size  : 2em;
+		white-space: normal;
+		width      : 90%;
+	}
+
+	#nosotros > div {
+		width  : 90%;
+		margin : auto;
+		padding: 0px;
+	}
+
+	#servicios > div {
+		width: 90%;
+	}
+
+	#servicios > div > ul > li {
+		width        : 100%;
+		margin-bottom: 32px;
+	}
+
+	#servicios > div > ul > li:last-of-type {
+		margin-bottom: 0px;
+	}
+
+	#pagos > div {
+		width: 90%;
+	}
+
+	#blog > div {
+		width: 90%;
+	}
+
+	#articulo > header {
+		display: none;
+	}
+
+	#articulo > article {
+		flex-direction : column-reverse;
+		align-items    : center;
+		justify-content: center;
+	}
+
+		#articulo > article > div {
+			width: 100%;
+		}
+
+		#articulo > article > div:last-of-type {
+			height: 250px;
+		}
+}
+
+@media all and (orientation: portrait) and (max-width: 420px) {
+	body > button {
+		top : 20px;
+		left: 20px;
+	}
+
+		body > nav > div:first-of-type > div > a {
+			height: auto;
+			width: 50%;
+		}
+
+			body > nav > div:first-of-type > div > a > img {
+				height: auto;
+				width: 100%;
+			}
+
+		body > nav > div:first-of-type > div > ul {
+			justify-content: center;
+			flex-direction : column;
+		}
+
+			body > nav > div:first-of-type > div > ul > li {
+				display      : block;
+				width        : 100%;
+				margin-bottom: 12px;
+				margin-left  : 0px;
+			}
+
+			body > nav > div:first-of-type > div > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				body > nav > div:first-of-type > div > ul > li > a {
+					height: auto;
+				}
+
+		body > nav > div:last-of-type > div {
+			flex-direction: column;
+		}
+
+	body > header > h1 {
+		font-size: 2em;
+	}
+
+	#nosotros {
+		height : auto;
+		padding: 40px 0px;
+	}
+
+		#nosotros > div {
+			padding: 0px;
+			width  : 90%;
+			margin : auto;
+		}
+
+	#asegurate > h3 {
+		width    : 90%;
+		font-size: 2em;
+	}
+
+	#servicios > div {
+		width: 90%;
+	}
+
+	#pagos > div > h2 {
+		font-size: 2em;
+	}
+
+	#blog > div {
+		width: 90%;
+	}
+
+	#contacto {
+		height : auto;
+		padding: 40px 0px;
+	}
+
+		#contacto > div > form > div {
+			width: 100%;
+		}
+
+	#footer {
+		padding: 40px 0px;
+	}
+
+		#footer > div {
+			width          : 90%;
+			justify-content: center;
+		}
+
+			#footer > div > img {
+				width: 75%;
+			}
+
+			#footer > div > div {
+				margin-top: 32px;
+			}
+
+	body > footer {
+		display: block;
+	}
+
+		body > footer > div {
+			padding      : 0px;
+			margin       : 0px;
+			width        : 100%;
+			margin-bottom: 8px;
+		}
+
+		body > footer > div:last-of-type {
+			margin-bottom: 0px;
+		}
+
+	#articulo > article > div:last-of-type {
+		height: 250px;
+	}
+
+	#articulo > article > div:first-of-type {
+		padding: 32px;
+	}
+}
